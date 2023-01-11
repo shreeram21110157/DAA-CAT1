@@ -41,12 +41,12 @@ def check(w1,w2,i1,i2):
 
 def act(q1,q2,i1,i2):
     if(check(q1,q2,i1,i2)=='c'):
-        fmat[i1+1,i2+1] = fmat[i1,i2] + 2
+        fmat[i1+1,i2+1] = fmat[i1,i2] + 5
         global h1
         h1 = h1+q1[i1]
         act(q1,q2,i1+1,i2+1)
     elif(check(q1,q2,i1,i2)=='f'):
-        fmat[i1+1,i2+1] = max(fmat[i1,i2],fmat[i1+1,i2],fmat[i1,i2+1]) - 1
+        fmat[i1+1,i2+1] = max(fmat[i1,i2],fmat[i1+1,i2],fmat[i1,i2+1]) - 4
         global h2
         h2 = h2+q2[i2]
         act(q1,q2,i1+1,i2+1)
